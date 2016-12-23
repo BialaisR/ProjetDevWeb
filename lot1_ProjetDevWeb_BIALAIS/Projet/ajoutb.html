@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sortir à Lille- Ajouter un bar</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <header>
+    <!--Barre de navigation-->
+    <ul>
+      <li><a href="home.html">Accueil</a></li>
+      <li><a  href="bars.html">Les Bars</a></li>
+      <li><a href="quartiers.html">Les Quartiers</a></li>
+      <li><a class="active" href="ajoutb.html">Ajouter un bar</a></li>
+      <li><a href="ajoutq.html">Ajouter un quartier</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="rechercher"><form><input type="text" class="rech" name="search" placeholder="Rechercher un bar, un quartier..."></form>
+    </ul>
+  </header>
+
+  <!--Formulaire d'ajout d'un bar-->
+  <div class="ajoutbar">
+    <form action="action_bar.php" method="GET">
+      <label for="Nombar">Nom du bar</label>
+      <input type="text" id="Nombar" name="Nombar">
+
+      <label for="quartierbar">Quartier</label>
+      <select id="quartierbar" name="quartierbar">
+        <option value="inconnu"></option>
+        <option value="vieux-lille">Vieux-Lille</option>
+        <option value="lile-centre">Lille-Centre</option>
+      </select>
+
+      <label for="stylebar">Style de bar</label>
+      <select id="stylebar" name="stylebar">
+        <option value="inconnu"></option>
+        <option value="etudiant">Bar à étudiants</option>
+        <option value="bieres">Bar à bières</option>
+      </select>
+
+      <label for="horairesbar">Jour(s) d'ouverture</label><br/>
+      <input type="checkbox" name="jour" value="lundi"/>Lundi
+      <input type="checkbox" name="jour" value="mardi"/>Mardi
+      <input type="checkbox" name="jour" value="mercredi"/>Mercredi
+      <input type="checkbox" name="jour" value="jeudi"/>Jeudi
+      <input type="checkbox" name="jour" value="vendredi"/>Vendredi
+      <input type="checkbox" name="jour" value="samedi"/>Samedi
+      <input type="checkbox" name="jour" value="dimanche"/>Dimanche</br></br>
+
+      <label for="houverturebar">Heure d'ouverture</label>
+      <input type="time" id="houverturebar" name="houverturebar"></br></br>
+
+      <label for="hfermeturebar">Heure de fermeture</label>
+      <input type="time" id="hfermeturebar" name="hfermeturebar"></br></br>
+
+      <label for="descriptionbar">Description</label>
+      <textarea id="descriptionbar" name="descriptionbar" required placeholder="Ecrire ici la description du bar"></textarea>
+
+      <label for="filebar">Photo du bar : </label>
+      <input type="file" id="filebar" name="filebar">
+      <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+
+      <input type="submit" value="Ajouter">
+    </form>
+  </div> 
+  
+  
+</body>
+
+</html>
