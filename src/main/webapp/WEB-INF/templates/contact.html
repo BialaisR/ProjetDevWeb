@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sortir à Lille - Contact</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <header>
+    <!--Barre de navigation-->
+    <ul>
+      <li><a href="home">Accueil</a></li>
+      <li><a href="bars">Les Bars</a></li>
+      <li><a href="quartiers">Les Quartiers</a></li>
+      <li><a href="ajoutb">Ajouter un bar</a></li>
+      <li><a href="ajoutq">Ajouter un quartier</a></li>
+      <li><a class="active" href="contact">Contact</a></li>
+      <li class="rechercher"><form><input type="text" class="rech" name="search" placeholder="Rechercher un bar, un quartier..."></form>
+    </ul>
+  </header> 
+   
+  <!--Formulaire de contact-->
+  <div class="contact">
+    <form action="contact" method="POST" enctype="text/plain">
+      <label for="Nomcontact" >Votre nom</label>
+      <input type="text" id="Nomcontact" name="Nomcontact" required placeholder="Ex : Jean Dupond">
+
+      <label for="email">Votre adresse E-mail</label>
+      <input type="email" name="email" id="email">
+
+      <label for="typeCommentaire">Type du commentaire</label>
+      <select name="typeCommentaire">
+        <option value="avis">Avis sur le site</option>
+        <option value="question">Question sur le site</option>
+        <option value="autre">Autre</option>
+      </select>
+
+      <label for="commentaire">Commentaire</label>
+      <textarea id="dcommentaire" name="commentaire" required placeholder="Ecrire ici votre commentaire"></textarea>
+
+
+      <input type="submit" value="Valider">
+    </form>
+  </div> 
+
+</body>
+
+</html>

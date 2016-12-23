@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sortir à Lille- Les Quartiers</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <header>
+    <!--Barre de navigation-->
+    <ul>
+      <li><a href="home">Accueil</a></li>
+      <li><a href="bars">Les Bars</a></li>
+      <li><a class="active" href="quartiers">Les Quartiers</a></li>
+      <li><a href="ajoutb">Ajouter un bar</a></li>
+      <li><a href="ajoutq">Ajouter un quartier</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li class="rechercher"><form><input type="text" class="rech" name="search" placeholder="Rechercher un bar, un quartier..."></form>
+    </ul>
+  </header>
+  <!--Liste des quartiers (description et images)--> 
+  <div class="quartiers">
+    <div class="imgetq">
+      <img th:src="${'images/'+imgQuartier}">
+      <section class="quartier">
+        <header><h1>[[$bars.nomQ]]</h1></header>
+        <p th:text="${quartiers.descritpionQ}"></p>
+        <input class="supprimer" type="submit" value="supprimer">
+      </section>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sortir à Lille- Ajouter un quartier</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <header>
+    <!--Barre de navigation-->
+    <ul>
+      <li><a href="home">Accueil</a></li>
+      <li><a  href="bars">Les Bars</a></li>
+      <li><a href="quartiers">Les Quartiers</a></li>
+      <li><a href="ajoutb">Ajouter un bar</a></li>
+      <li><a class="active" href="ajoutq">Ajouter un quartier</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li class="rechercher"><form><input type="text" class="rech" name="search" placeholder="Rechercher un bar, un quartier..."></form>
+    </ul>
+  </header>
+
+  <!--Formulaire ajout quartier-->
+  <div class="ajoutquartier">
+    <form action="addQuartier" method="POST">
+      <label for="Nomquartier">Nom du quartier</label>
+      <input type="text" id="Nomquartier" name="Nomquartier">
+
+      <label for="descriptionquartier">Description</label>
+      <textarea id="descriptionquartier" name="descriptionquartier" required placeholder="Ecrire ici la description du quartier"></textarea>
+
+      <label for="filequartier">Photo du quartier : </label>
+      <input type="file" id="filequartier" name="filequartier">
+      <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+
+      <input type="submit" value="Ajouter" class="btn btn-primary  pull-right">
+    </form>
+  </div> 
+  
+  
+</body>
+
+</html>

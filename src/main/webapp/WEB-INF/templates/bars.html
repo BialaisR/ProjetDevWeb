@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sortir à Lille - Les Bars</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <header>
+    <!--Barre de navigation-->
+    <ul>
+      <li><a href="home">Accueil</a></li>
+      <li><a class="active" href="bars">Les Bars</a></li>
+      <li><a href="quartiers">Les Quartiers</a></li>
+      <li><a href="ajoutb">Ajouter un bar</a></li>
+      <li><a href="ajoutq">Ajouter un quartier</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li class="rechercher"><form><input type="text" class="rech" name="search" placeholder="Rechercher un bar, un quartier..."></form>
+    </ul>
+  </header> 
+  <!--Présentation de tous les bars (Images + Nom - Quartier)-->
+  <div class="espace">
+    <div class="responsive" th:each="bars : ${bars}">
+      <div class="img">
+        <a th:href="${'magnum.html?id=' + idB}">
+          <img th:src="${'images/'+imgB}" alt="">
+        </a>
+        <a th:href="${'magnum.html?id=' + idB}">
+          <div class="desc">[[$bars.nameB]] -[[$bars.styleB]]</div>
+        </a>
+      </div>
+    </div>
+
+
+ 
+
+  </div>
+
+  
+</body>
+</html>
